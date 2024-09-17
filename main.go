@@ -4,9 +4,9 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/gorilla/mux"
 	"github.com/e19166/Simulator/db"
 	"github.com/e19166/Simulator/handlers"
+	"github.com/gorilla/mux"
 )
 
 func main() {

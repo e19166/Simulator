@@ -1,85 +1,70 @@
 package models
 
 import (
-    "time"
-    "github.com/google/uuid"
+	"github.com/google/uuid"
+	"time"
 )
 
-
 type Project struct {
+	Metadata struct {
+		Name string
 
-    Metadata struct {
+		Labels struct {
+			Environment string
 
-        Name string
+			Type string
+		}
 
-        Labels struct {
+		Annotations struct {
+			MonitoringType string
+		}
 
-            Environment string
+		DeletionTimestamp time.Time
 
-            Type        string
+		Reason string
 
-        }
+		Message string
+	}
 
-        Annotations struct {
+	ApiVersion string
 
-            MonitoringType string
+	Kind string
 
-        }
+	InvolvedObject struct {
+		Name string
 
-        DeletionTimestamp time.Time
+		Uuid uuid.UUID
 
-        Reason            string
+		Version string
+	}
 
-        Message           string
+	Action string
 
-    }
+	EventTime time.Time
 
-    ApiVersion      string
+	Source struct {
+		Component string
 
-    Kind            string
+		Host string
+	}
 
-    InvolvedObject  struct {
+	Count int
 
-        Name    string
+	Outcome string
 
-        Uuid   uuid.UUID
+	CurrentStatus string
 
-        Version string
+	CorrelationID string
 
-    }
+	UserIdpId string
 
-    Action         string
+	OrgUuid string
 
-    EventTime      time.Time
+	Series struct {
+		FirstTimestamp time.Time
 
-    Source         struct {
+		LastTimestamp time.Time
 
-        Component string
-
-        Host      string
-
-    }
-
-    Count           int
-
-    Outcome         string
-
-    CurrentStatus   string
-
-    CorrelationID   string
-
-    UserIdpId       string
-
-    OrgUuid         string
-
-    Series          struct {
-
-        FirstTimestamp time.Time
-
-        LastTimestamp  time.Time
-
-        State          string
-
-    }
-
+		State string
+	}
 }
