@@ -9,17 +9,23 @@ import (
 	"github.com/e19166/Simulator/models"
 )
 
+// CreateProject handles the creation of a new project.
+// Expects a JSON payload in the request body and inserts the project data into the database.
 func CreateProject(w http.ResponseWriter, r *http.Request) {
 	var project models.Project
+
+	// Decode the JSON request body into the Project struct
 	err := json.NewDecoder(r.Body).Decode(&project)
 	if err != nil {
+		// If decoding fails, respond with a bad request status and error message
 		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
 
-	// Log project data to verify it is being parsed correctly
+	// Log the received project data for debugging purposes
 	fmt.Printf("Received Project Data: %+v\n", project)
 
+	// Execute an SQL command to insert the project data into the database
 	_, err = db.DB.Exec(`
         INSERT INTO projects 
         (name, environment, type, monitoring_type, deletion_timestamp, reason, message, api_version, kind, involved_object_name, involved_object_uuid, involved_object_version, action, event_time, component, host, count, outcome, current_status, correlation_id, user_idp_id, org_uuid, first_timestamp, last_timestamp, state) 
@@ -53,11 +59,13 @@ func CreateProject(w http.ResponseWriter, r *http.Request) {
 	)
 
 	if err != nil {
+		// If SQL execution fails, log the error and respond with an internal server error status
 		fmt.Printf("SQL Execution Error: %v\n", err)
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
 
+	// Respond with a successful creation status and the inserted project data
 	w.WriteHeader(http.StatusCreated)
 	json.NewEncoder(w).Encode(project)
 }
