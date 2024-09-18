@@ -13,7 +13,7 @@ var DB *sql.DB
 // It connects to the PostgreSQL database using the provided connection string
 func InitDB() error {
 	// Connection string to the PostgreSQL database
-	connStr := "user=postgres password=1234 dbname=event_kind_db sslmode=disable"
+	connStr := ""
 
 	var err error
 	// Open a database connection using the PostgreSQL driver
