@@ -22,7 +22,7 @@ A Go-based event management simulator with PostgreSQL integration. This applicat
 1. **Clone the Repository:**
 
 ```sh
-   git clone https://github.com/yourusername/Simulator.git
+   git clone https://github.com/e19166/Simulator.git
    cd Simulator
 ```
 
