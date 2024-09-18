@@ -21,13 +21,14 @@ A Go-based project management simulator with PostgreSQL integration. This applic
 
 1. **Clone the Repository:**
 
-   ```sh
+```sh
    git clone https://github.com/yourusername/Simulator.git
    cd Simulator
+```
 
 2.**Install Dependencies:**
 
-  ```sh
+```sh
   go mod tidy
 ```
 
@@ -42,7 +43,7 @@ A Go-based project management simulator with PostgreSQL integration. This applic
 
 5. **Run the Application:**
 
-  ```sh
+```sh
   go run main.go
 ```
   The server will start on port 8080.
@@ -88,7 +89,7 @@ A Go-based project management simulator with PostgreSQL integration. This applic
   "CurrentStatus": "active",
   "CorrelationID": "correlation-123",
   "UserIdpId": "user-123",
-  "OrgUuid": "org-123",
+  "OrgUuid": "550e8400-e29b-41d4-a716-446655440000",
   "Series": {
     "FirstTimestamp": "2024-01-01T00:00:00Z",
     "LastTimestamp": "2024-01-01T00:00:00Z",
