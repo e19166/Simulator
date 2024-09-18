@@ -1,6 +1,6 @@
 # Simulator
 
-A Go-based project management simulator with PostgreSQL integration. This application provides a RESTful API to create and manage project records.
+A Go-based project management simulator with PostgreSQL integration. This application provides a RESTful API to create and manage event records.
 
 ## Features
 
