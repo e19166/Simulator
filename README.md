@@ -59,7 +59,7 @@ A Go-based event management simulator with PostgreSQL integration. This applicat
   ```json
   {
   "Metadata": {
-    "Name": "Project Alpha",
+    "Name": "Event Alpha",
     "Labels": {
       "Environment": "production",
       "Type": "web"
@@ -69,7 +69,7 @@ A Go-based event management simulator with PostgreSQL integration. This applicat
     },
     "DeletionTimestamp": "2024-01-01T00:00:00Z",
     "Reason": "Initial creation",
-    "Message": "This is a test project"
+    "Message": "This is a test event"
   },
   "ApiVersion": "v1",
   "Kind": "project",
