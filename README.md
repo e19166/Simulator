@@ -1,11 +1,11 @@
 # Simulator
 
-A Go-based project management simulator with PostgreSQL integration. This application provides a RESTful API to create and manage event records.
+A Go-based event management simulator with PostgreSQL integration. This application provides a RESTful API to create and manage event records.
 
 ## Features
 
 - **Database Integration**: Connects to a PostgreSQL database using Go's `database/sql` package.
-- **Project Management**: Allows the creation of project records via a RESTful API endpoint.
+- **Event Management**: Allows the creation of event records via a RESTful API endpoint.
 - **Routing**: Uses Gorilla Mux for handling HTTP routes.
 
 ## Getting Started
@@ -52,7 +52,7 @@ A Go-based project management simulator with PostgreSQL integration. This applic
 
 * **POST /projects**
 
-  Create a new project.
+  Create a new event.
 
   **Request Body Example:**
 
