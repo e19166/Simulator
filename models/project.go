@@ -5,45 +5,45 @@ import (
 	"time"
 )
 
-// Project represents a project entity with various metadata and attributes.
+// Project represents a event entity with various metadata and attributes.
 type Project struct {
-	// Metadata contains information about the project metadata
+	// Metadata contains information about the event metadata
 	Metadata struct {
-		// Name is the name of the project
+		// Name is the name of the event
 		Name string
 
-		// Labels holds key-value pairs for additional categorization of the project
+		// Labels holds key-value pairs for additional categorization of the event
 		Labels struct {
-			// Environment indicates the environment in which the project is running (e.g., production, staging)
+			// Environment indicates the environment in which the event is running (e.g., production, staging)
 			Environment string
 
-			// Type represents the type of the project
+			// Type represents the type of the event
 			Type string
 		}
 
-		// Annotations holds additional metadata about the project
+		// Annotations holds additional metadata about the event
 		Annotations struct {
-			// MonitoringType describes the type of monitoring applied to the project
+			// MonitoringType describes the type of monitoring applied to the event
 			MonitoringType string
 		}
 
-		// DeletionTimestamp is the time when the project was marked for deletion
+		// DeletionTimestamp is the time when the event was marked for deletion
 		DeletionTimestamp time.Time
 
-		// Reason explains why the project was created or modified
+		// Reason explains why the event was created or modified
 		Reason string
 
-		// Message contains a message related to the project
+		// Message contains a message related to the event
 		Message string
 	}
 
 	// ApiVersion indicates the version of the API used
 	ApiVersion string
 
-	// Kind specifies the kind of the project or object
+	// Kind specifies the kind of the event
 	Kind string
 
-	// InvolvedObject represents an object related to the project
+	// InvolvedObject represents an object related to the event
 	InvolvedObject struct {
 		// Name is the name of the involved object
 		Name string
@@ -55,13 +55,13 @@ type Project struct {
 		Version string
 	}
 
-	// Action describes the action performed related to the project
+	// Action describes the action performed related to the event
 	Action string
 
 	// EventTime is the time when the event occurred
 	EventTime time.Time
 
-	// Source represents the source of the project event
+	// Source represents the source of the event
 	Source struct {
 		// Component is the component from which the event originated
 		Component string
@@ -70,13 +70,13 @@ type Project struct {
 		Host string
 	}
 
-	// Count represents the count of occurrences related to the project
+	// Count represents the count of occurrences related to the event
 	Count int
 
-	// Outcome describes the result or outcome of the project event
+	// Outcome describes the result or outcome of the event
 	Outcome string
 
-	// CurrentStatus indicates the current status of the project
+	// CurrentStatus indicates the current status of the event
 	CurrentStatus string
 
 	// CorrelationID is a unique identifier used to correlate related events
@@ -88,7 +88,7 @@ type Project struct {
 	// OrgUuid is the unique identifier for the organization
 	OrgUuid string
 
-	// Series holds information about the time series related to the project
+	// Series holds information about the time series related to the event
 	Series struct {
 		// FirstTimestamp is the first timestamp of the series
 		FirstTimestamp time.Time

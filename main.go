@@ -14,7 +14,7 @@ func main() {
 	if err != nil {
 		log.Fatalf("error initializing database: %v", err)
 	}
-	defer db.CloseDB() // Changed from db.DB.Close() to db.CloseDB()
+	defer db.CloseDB()
 
 	// Create a new Gin router
 	r := gin.Default()
